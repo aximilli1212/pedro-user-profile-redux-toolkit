@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import {configureStore} from "@reduxjs/toolkit";
 import { Provider } from 'react-redux'
+import userReducers from "./features/user"
 
 const store = configureStore({
-    reducer:{}
+    reducer:{
+        user: userReducers
+    }
 })
 
 ReactDOM.render(
